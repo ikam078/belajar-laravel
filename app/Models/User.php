@@ -24,6 +24,9 @@ class User extends Authenticatable
         'gender',
     ];
 
+// agar bisa diedit semua
+//protected $guarded = [];
+
     /**
      * The attributes that should be hidden for serialization.
      *
