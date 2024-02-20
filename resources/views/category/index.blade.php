@@ -1,7 +1,14 @@
 @extends('admin.parent')
 
 @section('content')
-    
-ini halaman index category
+    <div class="card">
+        <h1>Category index</h1>
 
+        <hr>
+
+        <div class="container d-flex justify-content-end">
+            <a href="{{ route('category.create') }}" class="btn btn-success">Create Category</a>
+        </div>
+
+    </div>
 @endsection
