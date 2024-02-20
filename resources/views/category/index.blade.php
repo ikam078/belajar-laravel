@@ -2,6 +2,6 @@
 
 @section('content')
     
-ini halaman index extends
+ini halaman index category
 
 @endsection
