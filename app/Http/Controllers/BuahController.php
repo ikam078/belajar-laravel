@@ -43,7 +43,8 @@ class BuahController extends Controller
         //simpan data ke dalama database
         Category::create([
             'name' => $request->name,
-            'slug' => Str::slug($request->name)
+            'slug' => Str::slug($request->name),
+            'harga' => $request->harga
         ]);
 
         // jika sudah maka kembalikan ke halaman category.index
