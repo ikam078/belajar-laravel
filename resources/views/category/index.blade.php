@@ -27,9 +27,17 @@
             <tbody>
                 @foreach ($category as $row)
                 <tr>
-                    <td>{{ $row->loop }}1</td>
-                    <td>{{ $row->name }}category 1</td>
-                    <td></td>
+                    <td>{{ $row->iteration }}</td>
+                    <td>{{ $row->name }}</td>
+                    <td>
+                        <a href="{{ route('category.show', $row->id) }}" class="btn btn-info">Show Category</a>
+                        <form action="{{ route('category.destroy', $row-.id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">
+                            Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

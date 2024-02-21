@@ -68,7 +68,9 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::findOrFail($id);
+
+        return view('category.show', compact('category'));
     }
 
     /**
@@ -102,6 +104,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->delete();
+
+        return redirect()->route('category.index')
+            ->with(['success' => 'Data Berhasil Dihapus']);
     }
 }
