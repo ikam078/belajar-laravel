@@ -15,7 +15,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('category.index');
+        $category = Category::all();
+
+        return view('category.index', compact('category'));
     }
 
     /**
@@ -48,12 +50,12 @@ class CategoryController extends Controller
             ])
         ) {
             return redirect()->route('category.index')
-            ->with(['success'], 'Data Berhasil Disimpan');
+                ->with(['success' => 'Data Berhasil Disimpan']);
         } else {
             return redirect()->route('category.create')
-            ->with(['error'], 'Data Gagal Disimpan');
+                ->with(['error'], 'Data Gagal Disimpan');
         }
-        
+
         // jika sudah maka kembalikan ke halaman category.index
         return redirect()->route('category.index');
     }

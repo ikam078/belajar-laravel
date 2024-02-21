@@ -10,5 +10,29 @@
             <a href="{{ route('category.create') }}" class="btn btn-success">Create Category</a>
         </div>
 
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <table class="table">
+            <th>
+                <tr>
+                    <td>no</td>
+                    <td>name</td>
+                    <td>action</td>
+                </tr>
+            </th>
+            <tbody>
+                @foreach ($category as $row)
+                <tr>
+                    <td>{{ $row->loop }}1</td>
+                    <td>{{ $row->name }}category 1</td>
+                    <td></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection
