@@ -4,7 +4,7 @@
 
         <h1>Create buah</h1>
 
-        <form action="{{ route('category.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('buah.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('POST')
             <div class="form-floating mb-3">
@@ -12,11 +12,11 @@
                 <label for="floatingInput">nama buah</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="" class="form-control" id="floatingInput" placeholder="harga" name="name">
+                <input type="" class="form-control" id="floatingInput" placeholder="harga" name="">
                 <label for="floatingInput">harga</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="" class="form-control" id="floatingInput" placeholder="warna" name="name">
+                <input type="" class="form-control" id="floatingInput" placeholder="warna" name="">
                 <label for="floatingInput">warna</label>
             </div>
 
