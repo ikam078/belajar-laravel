@@ -36,16 +36,24 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'name' => 'required'
         ]);
 
         //simpan data ke dalama database
-        Category::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
-        ]);
-
+        if (
+            Category::create([
+                'name' => $request->name,
+                'slug' => Str::slug($request->name)
+            ])
+        ) {
+            return redirect()->route('category.index')
+            ->with(['success'], 'Data Berhasil Disimpan');
+        } else {
+            return redirect()->route('category.create')
+            ->with(['error'], 'Data Gagal Disimpan');
+        }
+        
         // jika sudah maka kembalikan ke halaman category.index
         return redirect()->route('category.index');
     }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Buah;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -43,7 +43,7 @@ class BuahController extends Controller
         ]);
 
         //simpan data ke dalama database
-        Category::create([
+        Buah::create([
             'name' => $request->name,
             'slug' => Str::slug($request->name),
             'harga' => $request->harga,
