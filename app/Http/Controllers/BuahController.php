@@ -37,14 +37,17 @@ class BuahController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name' => 'required'
+            'name' => 'required',
+            'harga' => 'required',
+            'warna' => 'required'
         ]);
 
         //simpan data ke dalama database
         Category::create([
             'name' => $request->name,
             'slug' => Str::slug($request->name),
-            'harga' => $request->harga
+            'harga' => $request->harga,
+            'warna' => $request->warna
         ]);
 
         // jika sudah maka kembalikan ke halaman category.index

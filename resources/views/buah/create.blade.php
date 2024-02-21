@@ -12,17 +12,17 @@
                 <label for="floatingInput">nama buah</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="" class="form-control" id="floatingInput" placeholder="harga" name="">
+                <input type="" class="form-control" id="floatingInput" placeholder="harga" name="harga">
                 <label for="floatingInput">harga</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="" class="form-control" id="floatingInput" placeholder="warna" name="">
+                <input type="" class="form-control" id="floatingInput" placeholder="warna" name="warna">
                 <label for="floatingInput">warna</label>
             </div>
 
             <button type="submit" class="btn btn-primary">Create</button>
 
         </form>
-        
+
     </div>
 @endsection
