@@ -96,7 +96,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //validate
-        $this->validate($request,[
+        $this->validate($request, [
             'name' => 'required'
         ]);
 
@@ -110,7 +110,7 @@ class CategoryController extends Controller
         ]);
 
         return redirect()->route('category.index')
-        ->with(['success' =>'Data Berhasil Diupdate']);
+            ->with(['success' => 'Data Berhasil Diupdate']);
     }
 
     /**
@@ -122,6 +122,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::findOrFail($id);
+
         $category->delete();
 
         return redirect()->route('category.index')

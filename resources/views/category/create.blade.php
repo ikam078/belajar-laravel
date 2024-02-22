@@ -14,7 +14,7 @@
             </div>
         @endif
 
-        <h1>Create Category</h1>
+        <h1 class="p-2">Create Category</h1>
 
         <form action="{{ route('category.store') }}" method="post" enctype="multipart/form-data">
             @csrf
