@@ -95,7 +95,22 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //validate
+        $this->validate($request,[
+            'name' => 'required'
+        ]);
+
+        // get data by id
+        $category = Category::findOrFail($id);
+
+        // update data
+        $category->update([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name)
+        ]);
+
+        return redirect()->route('category.index')
+        ->with(['success' =>'Data Berhasil Diupdate']);
     }
 
     /**
