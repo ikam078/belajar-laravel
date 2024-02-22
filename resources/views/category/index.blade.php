@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <h1>Category index</h1>
+        <h1 class="m-3">Category index</h1>
 
         <hr>
 
@@ -30,11 +30,11 @@
                     <td>{{ $row->iteration }}</td>
                     <td>{{ $row->name }}</td>
                     <td>
-                        <a href="" class="btn btn-info">Show Category</a>
+                        <a href="" class="m-2 btn btn-info">Show Category</a>
                         <form action="{{ route('category.show', $row->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="m-2 btn btn-danger">
                             Delete</button>
                         </form>
                     </td>
