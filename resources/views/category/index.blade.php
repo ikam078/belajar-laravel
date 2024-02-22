@@ -30,8 +30,8 @@
                     <td>{{ $row->iteration }}</td>
                     <td>{{ $row->name }}</td>
                     <td>
-                        <a href="" class="m-2 btn btn-info">Show Category</a>
-                        <form action="{{ route('category.show', $row->id) }}" method="POST">
+                        <a href="{{ route('category.show', $row->id) }}"" class="m-2 btn btn-info">Show Category</a>
+                        <form action=" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="m-2 btn btn-danger">
