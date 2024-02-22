@@ -11,10 +11,11 @@
             {{-- method delete = delete --}}
             {{-- method put = update --}}
             {{-- method patch = update --}}
-            
+
             <label for="">Name Category</label>
             <input type="text" value="{{ $category->name }}" class="form-control" disabled>
             
+            <button type="submit" class="btn btn-warning">update</button>
         </form>
 
     </div>
