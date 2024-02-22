@@ -15,7 +15,7 @@
             <label for="">Name Category</label>
             <input type="text" value="{{ $category->name }}" class="form-control" disabled>
             
-            <button type="submit" class="btn btn-warning">update</button>
+            <button type="submit" class="mt-3 btn btn-warning">update</button>
         </form>
 
     </div>
