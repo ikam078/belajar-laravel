@@ -3,7 +3,7 @@
 @section('content')
     <div class="card p-4">
 
-        <form action="" method="POST">
+        <form action="{{ route('category.update', $category->id) }}" method="POST">
             @csrf
             @method('PUT')
 
@@ -13,7 +13,7 @@
             {{-- method patch = update --}}
 
             <label for="">Name Category</label>
-            <input type="text" value="{{ $category->name }}" class="form-control" disabled>
+            <input type="text" value="{{ $category->name }}" class="form-control" name="name">
             
             <button type="submit" class="mt-3 btn btn-warning">update</button>
         </form>
